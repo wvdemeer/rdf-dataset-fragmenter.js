@@ -23,6 +23,7 @@ export * from './lib/transform/termtemplate/TermTemplateQuadComponent';
 export * from './lib/transform/termtemplate/TermTemplateStaticNamedNode';
 export * from './lib/transform/value/IValueModifier';
 export * from './lib/transform/value/ValueModifierRegexReplaceGroup';
+export * from './lib/transform/value/ValueModifierDistributeIri';
 export * from './lib/transform/IQuadTransformer';
 export * from './lib/transform/QuadTransformerAppendQuad';
 export * from './lib/transform/QuadTransformerAppendQuadLink';
