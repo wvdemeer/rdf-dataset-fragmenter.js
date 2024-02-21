@@ -37,11 +37,10 @@
     "@rdfjs/types": "*",
     "@types/async-lock": "^1.4.0",
     "@types/lru-cache": "^5.0.0",
-    "@types/mkdirp": "^1.0.0",
     "async-lock": "^1.4.0",
     "componentsjs": "^5.0.0",
     "lru-cache": "^6.0.0",
-    "mkdirp": "^1.0.0",
+    "mkdirp": "^3.0.1",
     "rdf-parse": "^2.0.0",
     "rdf-serialize": "^2.0.0",
     "rdf-string": "^1.6.0",
@@ -95,13 +94,13 @@
   "scripts": {
     "test": "jest ${1}",
     "test-watch": "jest ${1} --watch",
-    "lint": "eslint . --ext .ts",
-    "lint:fix": "eslint . --ext .ts --fix",
-    "build": "yarn run build:ts && yarn run build:components",
+    "lint": "eslint . --ext .ts --cache",
+    "lint:fix": "eslint . --ext .ts --cache --fix",
+    "build": "npm run build:ts && npm run build:components",
     "build:components": "componentsjs-generator -s lib -r rdfdf",
     "build:ts": "tsc",
-    "validate": "yarn ls",
-    "prepare": "yarn run build",
+    "validate": "npm ls",
+    "prepare": "npm run build",
     "version": "manual-git-changelog onversion"
   }
 }
